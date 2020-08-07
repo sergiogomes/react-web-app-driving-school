@@ -1,20 +1,34 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from "next/head";
+import Link from "next/link";
 
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from "./layout.module.css";
+import utilStyles from "../../styles/utils.module.css";
 
-const name = 'Sergio'
-export const siteTitle = 'Driver ID on Purse'
+const name = "Driver ID on Purse";
+export const siteTitle = "Driver ID on Purse";
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicons/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicons/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicons/favicon-16x16.png"
+        />
         <link rel="manifest" href="/favicons/site.webmanifest" />
         <meta
           name="description"
@@ -67,5 +81,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }
