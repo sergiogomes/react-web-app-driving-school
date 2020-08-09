@@ -40,6 +40,32 @@
   background-color: rgba(0, 0, 0, 0.08);
 }
 
+.buttonIcon:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.closeContainer {
+  width: 100%;
+  text-align: right;
+  padding: 18px;
+}
+
+.buttonClose {
+  font-size: 20px;
+}
+
+.space {
+  margin: 0rem 1rem;
+}
+
 .colorPink {
   color: #fa55aa;
+}
+
+.colorGray {
+  color: lightslategray;
+}
+
+.colorDanger {
+  color: red;
 }
