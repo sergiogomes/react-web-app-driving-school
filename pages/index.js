@@ -1,14 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import Date from "../components/date/date";
 import Layout from "../components/layout/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
-
-library.add(fas);
 
 export default function Home({ allPostsData }) {
   return (

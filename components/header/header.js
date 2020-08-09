@@ -16,7 +16,7 @@ export default function Header() {
         >
           <FontAwesomeIcon icon="bars" />
         </button>
-        <div className={styles.space}></div>
+        <div className={utilStyles.space}></div>
         <Link href="/">
           <a>
             <img
