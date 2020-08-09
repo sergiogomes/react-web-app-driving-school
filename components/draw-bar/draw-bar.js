@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import utilStyles from "../../styles/utils.module.css";
@@ -10,7 +11,7 @@ const menus = [
     id: 1,
     icon: "power-off",
     name: "Logout",
-    src: "",
+    src: "/",
     color: utilStyles.colorDanger,
   },
   { id: 2, icon: "home", name: "Home", src: "/", color: utilStyles.colorGray },
@@ -18,44 +19,66 @@ const menus = [
     id: 3,
     icon: "chalkboard-teacher",
     name: "Theoretical Class",
-    src: "",
+    src: "/",
     color: utilStyles.colorGray,
   },
   {
     id: 4,
     icon: "car-crash",
     name: "Pratical Class",
-    src: "",
+    src: "/",
     color: utilStyles.colorGray,
   },
   {
     id: 5,
     icon: "user-graduate",
     name: "Students",
-    src: "",
+    src: "/",
     color: utilStyles.colorGray,
   },
   {
     id: 6,
     icon: "user-tie",
     name: "Teachers",
-    src: "",
+    src: "/",
     color: utilStyles.colorGray,
   },
-  { id: 7, icon: "car", name: "Cars", src: "", color: utilStyles.colorGray },
+  { id: 7, icon: "car", name: "Cars", src: "/", color: utilStyles.colorGray },
+  {
+    id: 8,
+    icon: "info-circle",
+    name: "About",
+    src: "/",
+    color: utilStyles.colorGray,
+  },
 ];
 
+const useStore = () => {
+  const isDrawBarOpened = useSelector((state) => state.isDrawBarOpened);
+  const dispatch = useDispatch();
+  const onHandleDrawBar = () => dispatch({ type: "HANDLE_DRAW_BAR" });
+  return { isDrawBarOpened, onHandleDrawBar };
+};
+
 export default function DrawBar() {
+  const { isDrawBarOpened, onHandleDrawBar } = useStore();
   return (
     <div>
-      <div className={styles.navigationDrawer}>
+      <div
+        className={
+          isDrawBarOpened
+            ? `${styles.navigationDrawer} ${styles.opened}`
+            : `${styles.navigationDrawer} ${styles.closed}`
+        }
+      >
         <div className={utilStyles.closeContainer}>
           <button
+            onClick={onHandleDrawBar}
             className={`
-          ${utilStyles.buttonClose}
-          ${utilStyles.buttonIcon}
-          ${utilStyles.colorPink}
-          `}
+              ${utilStyles.buttonClose}
+              ${utilStyles.buttonIcon}
+              ${utilStyles.colorPink}
+            `}
           >
             <FontAwesomeIcon icon="times" />
           </button>
