@@ -24,7 +24,7 @@ export default function Header() {
         >
           <FontAwesomeIcon icon="bars" />
         </button>
-        <div className={utilStyles.space}></div>
+        <div className={utilStyles.space2}></div>
         <Link href="/">
           <a>
             <img
@@ -34,6 +34,8 @@ export default function Header() {
             />
           </a>
         </Link>
+        <div className={utilStyles.space2}></div>
+        <p>Header</p>
       </div>
     </header>
   );
