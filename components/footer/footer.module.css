@@ -1,0 +1,42 @@
+.footer {
+  align-items: center;
+  background-image: linear-gradient(#000, #000, #000, #000, #000, #fff);
+  bottom: 0;
+  color: white;
+  left: 0;
+  right: 0;
+}
+
+.footerContainer {
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 36rem;
+}
+
+.copyright {
+  padding: 15px 15px;
+  text-align: center;
+}
+
+.subContainer {
+  display: flex;
+}
+
+.containerList {
+  width: 100%;
+}
+
+.containerListLi {
+  display: block;
+  padding: 5px;
+}
+
+.footerButton {
+  color: #fff;
+  font-size: 15px;
+}
+
+.footerMargin {
+  padding-bottom: 8rem;
+}

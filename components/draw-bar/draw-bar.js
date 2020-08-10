@@ -6,62 +6,17 @@ import utilStyles from "../../styles/utils.module.css";
 import styles from "./draw-bar.module.css";
 
 const name = "Driver ID on Purse";
-const menus = [
-  {
-    id: 1,
-    icon: "power-off",
-    name: "Logout",
-    src: "/",
-    color: utilStyles.colorDanger,
-  },
-  { id: 2, icon: "home", name: "Home", src: "/", color: utilStyles.colorGray },
-  {
-    id: 3,
-    icon: "chalkboard-teacher",
-    name: "Theoretical Class",
-    src: "/",
-    color: utilStyles.colorGray,
-  },
-  {
-    id: 4,
-    icon: "car-crash",
-    name: "Pratical Class",
-    src: "/",
-    color: utilStyles.colorGray,
-  },
-  {
-    id: 5,
-    icon: "user-graduate",
-    name: "Students",
-    src: "/",
-    color: utilStyles.colorGray,
-  },
-  {
-    id: 6,
-    icon: "user-tie",
-    name: "Teachers",
-    src: "/",
-    color: utilStyles.colorGray,
-  },
-  { id: 7, icon: "car", name: "Cars", src: "/", color: utilStyles.colorGray },
-  {
-    id: 8,
-    icon: "info-circle",
-    name: "About",
-    src: "/",
-    color: utilStyles.colorGray,
-  },
-];
 
 const useStore = () => {
+  const menus = useSelector((state) => state.menus);
   const isDrawBarOpened = useSelector((state) => state.isDrawBarOpened);
   const dispatch = useDispatch();
   const onHandleDrawBar = () => dispatch({ type: "HANDLE_DRAW_BAR" });
-  return { isDrawBarOpened, onHandleDrawBar };
+  return { menus, isDrawBarOpened, onHandleDrawBar };
 };
 
 export default function DrawBar() {
-  const { isDrawBarOpened, onHandleDrawBar } = useStore();
+  const { menus, isDrawBarOpened, onHandleDrawBar } = useStore();
   return (
     <div>
       <div
@@ -102,9 +57,9 @@ export default function DrawBar() {
               ${menu.color}
             `}
             >
-              <div className={utilStyles.space}></div>
+              <div className={utilStyles.space2}></div>
               <FontAwesomeIcon icon={menu.icon} />
-              <div className={utilStyles.space}></div>
+              <div className={utilStyles.space2}></div>
               <span>{menu.name}</span>
             </button>
           </Link>
