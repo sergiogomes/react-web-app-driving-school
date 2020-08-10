@@ -2,10 +2,78 @@ import { useMemo } from "react";
 import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
+import utilStyles from "../styles/utils.module.css";
+
 let store;
 
 const initialState = {
   isDrawBarOpened: false,
+  menus: [
+    {
+      id: 1,
+      icon: "power-off",
+      name: "Logout",
+      src: "/",
+      color: utilStyles.colorDanger,
+      type: "menu",
+    },
+    {
+      id: 2,
+      icon: "home",
+      name: "Home",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "menu",
+    },
+    {
+      id: 3,
+      icon: "chalkboard-teacher",
+      name: "Theoretical Class",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "service",
+    },
+    {
+      id: 4,
+      icon: "car-crash",
+      name: "Pratical Class",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "service",
+    },
+    {
+      id: 5,
+      icon: "user-graduate",
+      name: "Students",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "registration",
+    },
+    {
+      id: 6,
+      icon: "user-tie",
+      name: "Teachers",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "registration",
+    },
+    {
+      id: 7,
+      icon: "car",
+      name: "Cars",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "registration",
+    },
+    {
+      id: 8,
+      icon: "info-circle",
+      name: "About",
+      src: "/",
+      color: utilStyles.colorGray,
+      type: "menu",
+    },
+  ],
 };
 
 const reducer = (state = initialState, action) => {
