@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
+import "../styles/tailwind.css";
 import "../styles/global.css";
 import { useStore } from "../store/index";
 
