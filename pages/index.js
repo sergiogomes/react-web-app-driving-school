@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Date from "../components/date/date";
 import Layout from "../components/layout/layout";
@@ -13,7 +14,15 @@ export default function Home({ allPostsData }) {
         <title>Driver ID on Purse</title>
       </Head>
 
-      <section className={utilStyles.headingMd}>
+      <section>
+        <h1 className={utilStyles.headerContainer}>
+          <FontAwesomeIcon icon="home" />
+          <div className={utilStyles.space}></div>
+          <span>Home</span>
+        </h1>
+      </section>
+
+      <section className={utilStyles.headerImg}>
         <img
           src="/images/logo.png"
           alt="Driver ID on Purse Logo"
