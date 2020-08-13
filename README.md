@@ -77,3 +77,9 @@ This approach works well for user dashboard pages, for example. Because a dashbo
 #### SWR
 
 The team behind Next.js has created a React hook for data fetching called SWR. We highly recommend it if you’re fetching data on the client side. It handles caching, revalidation, focus tracking, refetching on interval, and more.
+
+## Tailwind
+
+```sh
+npx tailwind init
+```
