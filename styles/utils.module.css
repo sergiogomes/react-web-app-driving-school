@@ -44,14 +44,53 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.buttonClose {
+  font-size: 20px;
+}
+
 .closeContainer {
   width: 100%;
   text-align: right;
   padding: 18px;
 }
 
-.buttonClose {
-  font-size: 20px;
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.headerContainer {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.headerImg {
+  margin: 0 20%;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .space {
@@ -72,4 +111,8 @@
 
 .colorDanger {
   color: red;
+}
+
+.center {
+  text-align: center;
 }

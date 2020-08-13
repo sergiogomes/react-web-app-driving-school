@@ -69,7 +69,7 @@ const initialState = {
       id: 8,
       icon: "info-circle",
       name: "About",
-      src: "/",
+      src: "/about",
       color: utilStyles.colorGray,
       type: "menu",
     },
