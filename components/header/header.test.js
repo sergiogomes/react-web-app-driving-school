@@ -135,6 +135,6 @@ describe("Header component", () => {
 
 describe("Header component", () => {
   it("should render Header", () => {
-    console.log("Header");
+    // console.log("Header");
   });
 });
