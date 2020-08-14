@@ -1,6 +1,9 @@
 import { parseISO, format } from "date-fns";
 
 export default function DateComponent({ dateString }) {
-  const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL d, yyyy")}</time>;
+  if (dateString && dateString.length === 10) {
+    const date = parseISO(dateString);
+    return <time dateTime={dateString}>{format(date, "LLLL d, yyyy")}</time>;
+  }
+  return <></>;
 }

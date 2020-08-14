@@ -17,4 +17,9 @@ describe("Date Component", () => {
     const wrapper = mount(<DateComponent dateString={dateStr} />);
     expect(wrapper.find("time")).toHaveLength(1);
   });
+
+  it("should render empty component for empty date", () => {
+    const wrapper = mount(<DateComponent dateString="" />);
+    expect(wrapper).toMatchObject({});
+  });
 });
