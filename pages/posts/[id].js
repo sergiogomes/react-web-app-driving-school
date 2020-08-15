@@ -12,13 +12,22 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <DateComponent dateString={postData.date} />
+
+      <div className="max-w-full rounded overflow-hidden shadow-lg">
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{postData.title}</div>
+          <div className={utilStyles.lightText}>
+            <Date dateString={postData.date} />
+          </div>
+          <article>
+            <p
+              className="text-gray-700 text-base"
+              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            />
+          </article>
+
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
+      </div>
     </Layout>
   );
 }

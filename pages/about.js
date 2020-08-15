@@ -18,40 +18,49 @@ export default function About() {
           <title>About</title>
         </Head>
 
-        <section>
-          <h1 className={utilStyles.headerContainer}>
-            <FontAwesomeIcon icon="info-circle" />
-            <div className={utilStyles.space}></div>
-            <span>About</span>
-          </h1>
-        </section>
-
-        <section className={utilStyles.headerImg}>
-          <img
-            src="/images/logo.png"
-            alt="Driver ID on Purse Logo"
-            className="img"
-          />
-        </section>
-
-        <section className={utilStyles.center}>
-          <h3>Version: 1.0.0</h3>
-        </section>
-
-        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <p>Driver ID on Purse is a system management for driving schools.</p>
-          <p>
-            You can register all students, teachers, cars, and then gather them
-            in theoretical and pratical classes.
-          </p>
-          <small className={utilStyles.lightText}>Developed by SergioPow</small>
-          <address>
-            <small className={utilStyles.lightText}>
-              Reach me on:
-              <a href={emailLink}> sergiopgomes92@gmail.com</a>
-            </small>
-          </address>
-        </section>
+        <div className="max-w-full rounded overflow-hidden shadow-lg">
+          <div className="px-6 py-4">
+            <div
+              className="font-bold text-xl mb-2"
+              className={utilStyles.headerContainer}
+            >
+              <FontAwesomeIcon icon="info-circle" />
+              <div className={utilStyles.space}></div>
+              <span>About</span>
+            </div>
+            <section className={utilStyles.headerImg}>
+              <img
+                src="/images/logo.png"
+                alt="Driver ID on Purse Logo"
+                className="img"
+              />
+            </section>
+            <section className={utilStyles.center}>
+              <h3>Version: 1.0.0</h3>
+            </section>
+            <p className="text-gray-700 text-base">
+              <span>
+                Driver ID on Purse is a system management for driving schools.
+              </span>
+              <br />
+              <span>
+                You can register all students, teachers, cars, and then gather
+                them in theoretical and pratical classes.
+              </span>
+              <br />
+              <small className={utilStyles.lightText}>
+                Developed by SergioPow
+              </small>
+              <br />
+            </p>
+            <address>
+              <small className={utilStyles.lightText}>
+                Reach me on:
+                <a href={emailLink}> sergiopgomes92@gmail.com</a>
+              </small>
+            </address>
+          </div>
+        </div>
       </Layout>
     </>
   );
