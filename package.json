@@ -27,10 +27,6 @@
     "remark-html": "^12.0.0"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.6.2"
-  },
-  "devDependencies": {
     "@babel/core": "^7.11.1",
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/react": "^10.4.8",
