@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Layout from "../../components/layout/layout";
-import Date from "../../components/date/date";
+import DateComponent from "../../components/date/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 import utilStyles from "../../styles/utils.module.css";
@@ -25,6 +25,7 @@ export default function Post({ postData }) {
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
           </article>
+
         </div>
       </div>
     </Layout>
