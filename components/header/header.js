@@ -35,7 +35,6 @@ export default function Header() {
           </a>
         </Link>
         <div className={utilStyles.space2}></div>
-        <p>Header</p>
       </div>
     </header>
   );
