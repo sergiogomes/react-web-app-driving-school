@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 import Alert from "./alert";
 
-/** @test {Tests fot Alert Component} */
+/** @test {Tests for Alert Component} */
 describe("Alert Component", () => {
   beforeAll(() => {
     configure({ adapter: new Adapter() });

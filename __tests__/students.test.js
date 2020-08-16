@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 // import Students from "../pages/students";
 
-/** @test {Tests fot Students Component} */
+/** @test {Tests for Students Component} */
 describe("Students Component", () => {
   beforeAll(() => {
     configure({ adapter: new Adapter() });

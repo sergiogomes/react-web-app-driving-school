@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 import Meta from "./meta";
 
-/** @test {Tests fot Meta Component} */
+/** @test {Tests for Meta Component} */
 describe("Meta Component", () => {
   beforeAll(() => {
     configure({ adapter: new Adapter() });

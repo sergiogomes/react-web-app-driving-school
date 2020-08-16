@@ -1,6 +1,8 @@
 .footer {
   align-items: center;
-  background-image: linear-gradient(#000, #000, #000, #000, #000, #fff);
+  /* background-image: linear-gradient(#000, #000, #000, #000, #000, #fff); */
+  background-color: #000;
+  position: fixed;
   bottom: 0;
   color: white;
   left: 0;
@@ -35,8 +37,4 @@
 .footerButton {
   color: #fff;
   font-size: 15px;
-}
-
-.footerMargin {
-  padding-bottom: 8rem;
 }
