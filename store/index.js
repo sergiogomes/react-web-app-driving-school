@@ -45,7 +45,7 @@ const initialState = {
       id: 5,
       icon: "user-graduate",
       name: "Students",
-      src: "/",
+      src: "/students",
       color: utilStyles.colorGray,
       type: "registration",
     },
