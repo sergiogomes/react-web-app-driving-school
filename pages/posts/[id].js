@@ -17,7 +17,7 @@ export default function Post({ postData }) {
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{postData.title}</div>
           <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
+            <DateComponent dateString={postData.date} />
           </div>
           <article>
             <p
@@ -25,7 +25,6 @@ export default function Post({ postData }) {
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
           </article>
-
         </div>
       </div>
     </Layout>

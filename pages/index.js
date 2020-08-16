@@ -40,14 +40,13 @@ export default function Home({ allPostsData }) {
                 </Link>
                 <br />
                 <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
+                  <DateComponent dateString={date} />
                 </small>
               </li>
             ))}
           </ul>
         </div>
       </div>
-
     </Layout>
   );
 }
