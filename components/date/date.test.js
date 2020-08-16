@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 import DateComponent from "./date";
 
-/** @test {Tests fot Date Component} */
+/** @test {Tests for Date Component} */
 describe("Date Component", () => {
   beforeAll(() => {
     configure({ adapter: new Adapter() });

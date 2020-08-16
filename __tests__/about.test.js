@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 import About from "../pages/about";
 
-/** @test {Tests fot About Component} */
+/** @test {Tests for About Component} */
 describe("About Component", () => {
   beforeAll(() => {
     configure({ adapter: new Adapter() });
