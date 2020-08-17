@@ -45,7 +45,7 @@ export default function Meta() {
       />
       <meta
         name="twitter:image"
-        content="https://raw.githubusercontent.com/sergiogomes/react-notes-list/master/src/assets/images/notes.png"
+        content="https://raw.githubusercontent.com/sergiogomes/react-web-app-driving-school/master/public/images/students.png"
       />
 
       <meta property="og:type" content="notes" />
@@ -58,7 +58,7 @@ export default function Meta() {
       <meta property="og:site_name" content="React Web App - Driving School" />
       <meta
         property="og:image"
-        content="https://raw.githubusercontent.com/sergiogomes/react-notes-list/master/src/assets/images/notes.png"
+        content="https://raw.githubusercontent.com/sergiogomes/react-web-app-driving-school/master/public/images/students.png"
       />
 
       <link rel="icon" href="/favicons/favicon.ico" />

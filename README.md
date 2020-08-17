@@ -4,6 +4,8 @@ React Web App - Driving School
 
 <https://driveridpurse.vercel.app/>
 
+![Students Page](https://raw.githubusercontent.com/sergiogomes/react-web-app-driving-school/master/public/images/students.png)
+
 ## Creating a Next.js app
 
 To create a Next.js app, open your terminal, cd into the directory you’d like to create the app in, and run the following command:
