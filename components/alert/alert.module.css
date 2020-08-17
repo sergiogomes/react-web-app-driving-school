@@ -1,6 +1,20 @@
 .success {
   color: green;
 }
+
 .error {
   color: red;
+}
+
+.show {
+  cursor: pointer;
+  display: block;
+  margin-right: 8px;
+  position: fixed;
+  right: 0;
+  width: 16rem;
+}
+
+.hide {
+  display: none;
 }

@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { ToastContainer, toast } from "../components/toast/toast";
+import Alert from "../components/alert/alert";
 import Layout from "../components/layout/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getLocalStorage, postLocalStorage } from "../storage/localStorage";
@@ -23,6 +25,8 @@ getStudents().then(
 export default function Students() {
   return (
     <>
+      <ToastContainer id="toast-comp" />
+
       <Layout>
         <Head>
           <title>Students</title>
@@ -50,7 +54,7 @@ export default function Students() {
                       placeholder="Name"
                       onKeyPress={(event) => {
                         if (event.key === "Enter") {
-                          saveStudent(event.target.value);
+                          saveStudent(event);
                         }
                       }}
                     />
@@ -59,6 +63,14 @@ export default function Students() {
                     </p>
                   </div>
                 </div>
+
+                {students && students.length === 5 && (
+                  <Alert
+                    type="warning"
+                    title="Warning"
+                    message="Limit of 5 students reached."
+                  />
+                )}
               </form>
 
               {students &&
@@ -83,6 +95,14 @@ export default function Students() {
   );
 }
 
+export function onNotify(id, type, title, message) {
+  toast.notify(message, {
+    title: title,
+    type: type,
+    targetId: id,
+  });
+}
+
 export async function getStudents() {
   const promisse = getLocalStorage("Student");
   return promisse.then(
@@ -100,31 +120,32 @@ export async function getStudents() {
   );
 }
 
-export async function saveStudent(name) {
+export function saveStudent(event) {
+  event.preventDefault();
+  const name = event.target.value;
   if (students.length === 5) {
-    alert("Students limit reached.");
-    return;
-  }
+    onNotify("toast-comp", "error", "Error", "Students limit reached.");
+  } else {
+    const student = {
+      id: new Date().getTime(),
+      name: name,
+    };
+    students.push(student);
+    const promisse = postLocalStorage("Student", students);
 
-  const student = {
-    id: new Date().getTime(),
-    name: name,
-  };
-  students.push(student);
-  const promisse = postLocalStorage("Student", students);
-
-  promisse.then(
-    (result) => {
-      if (result) {
-        console.log(result);
-        return result;
-      } else {
+    promisse.then(
+      (result) => {
+        if (result) {
+          onNotify("toast-comp", "success", "Success!", result);
+          return result;
+        } else {
+          return null;
+        }
+      },
+      (error) => {
+        console.error(error);
         return null;
       }
-    },
-    (error) => {
-      console.error(error);
-      return null;
-    }
-  );
+    );
+  }
 }
