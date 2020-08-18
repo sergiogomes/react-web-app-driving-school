@@ -3,13 +3,12 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import DateComponent from "../components/date/date";
-import Layout from "../components/layout/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <React.Fragment>
       <Head>
         <title>Driver ID on Purse</title>
       </Head>
@@ -47,7 +46,7 @@ export default function Home({ allPostsData }) {
           </ul>
         </div>
       </div>
-    </Layout>
+    </React.Fragment>
   );
 }
 

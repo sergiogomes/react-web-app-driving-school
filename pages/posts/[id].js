@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import Layout from "../../components/layout/layout";
 import DateComponent from "../../components/date/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
@@ -8,7 +7,7 @@ import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <React.Fragment>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -27,7 +26,7 @@ export default function Post({ postData }) {
           </article>
         </div>
       </div>
-    </Layout>
+    </React.Fragment>
   );
 }
 

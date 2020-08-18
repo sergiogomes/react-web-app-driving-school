@@ -180,15 +180,15 @@ export const ToastContainer = (props) => {
           align-items: flex-end;
           left: 0px;
           height: 0px;
-          background-color: red;
           z-index: 2;
         }
         .toast-container {
           position: fixed;
           width: 100%;
-          "top:46px"display: flex;
+          top: 46px
+          display: flex;
           flex-direction: column;
-          align-items: "flex-end";
+          align-items: flex-end;
           left: 0px;
         }
       `}</style>

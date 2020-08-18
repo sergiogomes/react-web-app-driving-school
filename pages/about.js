@@ -2,7 +2,6 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import utilStyles from "../styles/utils.module.css";
-import Layout from "../components/layout/layout";
 
 const email = "sergiopgomes92@gmail.com";
 const subject = "React%20Driver%20ID%20on%20Purse";
@@ -12,56 +11,54 @@ const emailLink = `mailto:${email}?subject=${subject}&body=${message}`;
 
 export default function About() {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>About</title>
-        </Head>
+    <React.Fragment>
+      <Head>
+        <title>About</title>
+      </Head>
 
-        <div className="max-w-full rounded overflow-hidden shadow-lg">
-          <div className="px-6 py-4">
-            <div
-              className="font-bold text-xl mb-2"
-              className={utilStyles.headerContainer}
-            >
-              <FontAwesomeIcon icon="info-circle" />
-              <div className={utilStyles.space}></div>
-              <span>About</span>
-            </div>
-            <section className={utilStyles.headerImg}>
-              <img
-                src="/images/logo.png"
-                alt="Driver ID on Purse Logo"
-                className="img"
-              />
-            </section>
-            <section className={utilStyles.center}>
-              <h3>Version: 1.0.0</h3>
-            </section>
-            <p className="text-gray-700 text-base">
-              <span>
-                Driver ID on Purse is a system management for driving schools.
-              </span>
-              <br />
-              <span>
-                You can register all students, teachers, cars, and then gather
-                them in theoretical and pratical classes.
-              </span>
-              <br />
-              <small className={utilStyles.lightText}>
-                Developed by SergioPow
-              </small>
-              <br />
-            </p>
-            <address>
-              <small className={utilStyles.lightText}>
-                Reach me on:
-                <a href={emailLink}> sergiopgomes92@gmail.com</a>
-              </small>
-            </address>
+      <div className="max-w-full rounded overflow-hidden shadow-lg">
+        <div className="px-6 py-4">
+          <div
+            className="font-bold text-xl mb-2"
+            className={utilStyles.headerContainer}
+          >
+            <FontAwesomeIcon icon="info-circle" />
+            <div className={utilStyles.space}></div>
+            <span>About</span>
           </div>
+          <section className={utilStyles.headerImg}>
+            <img
+              src="/images/logo.png"
+              alt="Driver ID on Purse Logo"
+              className="img"
+            />
+          </section>
+          <section className={utilStyles.center}>
+            <h3>Version: 1.0.0</h3>
+          </section>
+          <p className="text-gray-700 text-base">
+            <span>
+              Driver ID on Purse is a system management for driving schools.
+            </span>
+            <br />
+            <span>
+              You can register all students, teachers, cars, and then gather
+              them in theoretical and pratical classes.
+            </span>
+            <br />
+            <small className={utilStyles.lightText}>
+              Developed by SergioPow
+            </small>
+            <br />
+          </p>
+          <address>
+            <small className={utilStyles.lightText}>
+              Reach me on:
+              <a href={emailLink}> sergiopgomes92@gmail.com</a>
+            </small>
+          </address>
         </div>
-      </Layout>
-    </>
+      </div>
+    </React.Fragment>
   );
 }

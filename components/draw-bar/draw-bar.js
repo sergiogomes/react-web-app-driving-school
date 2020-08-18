@@ -39,7 +39,7 @@ export default function DrawBar() {
           </button>
         </div>
         <Link href="/">
-          <a>
+          <a onClick={onHandleDrawBar}>
             <img
               src="/images/logo.png"
               className={styles.headerImage}
@@ -51,6 +51,7 @@ export default function DrawBar() {
           <Link href={menu.src} key={`link${menu.id}`}>
             <button
               key={`menu${menu.id}`}
+              onClick={onHandleDrawBar}
               className={`
               ${utilStyles.buttonIcon}
               ${styles.itemMenu}

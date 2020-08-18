@@ -9,7 +9,7 @@ import DrawBar from "../draw-bar/draw-bar";
 
 export default function Layout({ children, home }) {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <DrawBar />
       <div className={styles.container}>
@@ -26,6 +26,6 @@ export default function Layout({ children, home }) {
         )}
       </div>
       <Footer />
-    </>
+    </React.Fragment>
   );
 }
