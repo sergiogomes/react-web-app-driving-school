@@ -2,7 +2,7 @@
 
 React Web App - Driving School
 
-[![time tracker](https://wakatime.com/badge/github/sergiogomes/ionic-react-app-driving-school.svg)](https://wakatime.com/badge/github/sergiogomes/ionic-react-app-driving-school)
+[![time tracker](https://wakatime.com/badge/github/sergiogomes/react-web-app-driving-school.svg)](https://wakatime.com/badge/github/sergiogomes/react-web-app-driving-school)
 
 <https://driveridpurse.vercel.app/>
 
