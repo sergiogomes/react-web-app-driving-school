@@ -33,6 +33,13 @@ export default function About() {
               className="img"
             />
           </section>
+          <section className={utilStyles.headerImg}>
+            <img
+              src="https://wakatime.com/badge/github/sergiogomes/ionic-react-app-driving-school.svg"
+              alt="Wakatime Integration"
+              className="img"
+            />
+          </section>
           <section className={utilStyles.center}>
             <h3>Version: 1.0.0</h3>
           </section>

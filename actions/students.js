@@ -1,4 +1,4 @@
-let STUDENT_DATA = [
+const STUDENT_DATA = [
   { id: 1597632578549, name: "Jennifer Catarina Emanuelly da Mota" },
   { id: 1597632639984, name: "Vera Caroline Rebeca Jesus" },
   { id: 1597632663914, name: "Allana Alessandra Marina Rezende" },
