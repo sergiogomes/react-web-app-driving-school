@@ -2,12 +2,20 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import utilStyles from "../styles/utils.module.css";
+import packageJson from "../package.json";
 
 const email = "sergiopgomes92@gmail.com";
 const subject = "React%20Driver%20ID%20on%20Purse";
 const message =
   "Hello!%0D%0A%0D%0ASaw%20you%20web%20app%20Driver%20ID%20on%20Purse,%20and%20wanted%20to%20talk%20to%20you.%0D%0A%0D%0AThanks.";
 const emailLink = `mailto:${email}?subject=${subject}&body=${message}`;
+let version;
+
+if (packageJson && packageJson.version) {
+  version = packageJson.version;
+} else {
+  version = "1.0.0";
+}
 
 export default function About() {
   return (
@@ -24,7 +32,7 @@ export default function About() {
           >
             <FontAwesomeIcon icon="info-circle" />
             <div className={utilStyles.space}></div>
-            <span>About</span>
+            <span className={utilStyles.title}>About</span>
           </div>
           <section className={utilStyles.headerImg}>
             <img
@@ -41,7 +49,7 @@ export default function About() {
             />
           </section>
           <section className={utilStyles.center}>
-            <h3>Version: 1.0.0</h3>
+            <h3>Version: {version}</h3>
           </section>
           <p className="text-gray-700 text-base">
             <span>

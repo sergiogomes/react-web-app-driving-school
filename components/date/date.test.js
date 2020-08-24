@@ -12,10 +12,16 @@ describe("Date Component", () => {
   });
 
   const dateStr = "2020-01-01";
+  const dateTxt = "January 1, 2020";
 
   it("should render without crashing", () => {
     const wrapper = mount(<DateComponent dateString={dateStr} />);
     expect(wrapper.find("time")).toHaveLength(1);
+  });
+
+  it("shoul render the correct date text converted", () => {
+    const wrapper = mount(<DateComponent dateString={dateStr} />);
+    expect(wrapper.find("time").text()).toBe(dateTxt);
   });
 
   it("should render empty component for empty date", () => {

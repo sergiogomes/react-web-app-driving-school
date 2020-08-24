@@ -93,6 +93,10 @@
   text-align: center;
 }
 
+.title {
+  font-weight: 500;
+}
+
 .space {
   margin-right: 1rem;
 }

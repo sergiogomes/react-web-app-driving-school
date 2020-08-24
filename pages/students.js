@@ -65,7 +65,7 @@ class Students extends React.Component {
             >
               <FontAwesomeIcon icon="user-graduate" />
               <div className={utilStyles.space}></div>
-              <span>Students</span>
+              <span className={utilStyles.title}>Students</span>
             </div>
             <div>
               <form className="w-full max-w-lg">
